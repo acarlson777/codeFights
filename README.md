@@ -1,1 +1,2 @@
-# codeFights
+# codeSignal
+# Formerly Code Fights
