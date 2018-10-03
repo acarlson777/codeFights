@@ -27,3 +27,16 @@ def areEquallyStrong(yourLeft, yourRight, friendsLeft, friendsRight):
 
 # For inputArray = [2, 4, 1, 0], the output should be
 # arrayMaximalAdjacentDifference(inputArray) = 3.
+
+def arrayMaximalAdjacentDifference(inputArray):
+    maxdiff = 0
+    uno = 0
+    dos = 1
+
+    for i in range(0,len(inputArray)-1):
+        if maxdiff < abs(inputArray[uno] - inputArray[dos]):
+            maxdiff = abs(inputArray[uno] - inputArray[dos])
+        uno += 1
+        dos += 1
+
+    return maxdiff
