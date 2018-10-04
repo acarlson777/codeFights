@@ -40,3 +40,25 @@ def arrayMaximalAdjacentDifference(inputArray):
         dos += 1
 
     return maxdiff
+
+
+# IPv4 addresses are represented in dot-decimal notation, which consists of
+# four decimal numbers, each ranging from 0 to 255 inclusive, separated by
+# dots, e.g., 172.16.254.1.
+
+# Given a string, find out if it satisfies the IPv4 address naming rules.
+
+# Example
+# For inputString = "172.16.254.1", the output should be
+# isIPv4Address(inputString) = true;
+
+def isIPv4Address(inputString):
+    nums = inputString.split(".")
+
+    for n in nums:
+        if n == '' or n.isdigit()==False or len(nums) != 4:
+            return False
+        elif int(n) not in range(0,256):
+            return False
+
+    return True
