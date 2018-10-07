@@ -62,3 +62,33 @@ def isIPv4Address(inputString):
             return False
 
     return True
+
+
+#  You are given an array of integers representing coordinates of obstacles
+#  situated on a straight line.  Assume that you are jumping from the point
+#  with coordinate 0 to the right. You are allowed only to make jumps of the
+#  same length represented by some integer.
+
+#  Find the minimal length of the jump enough to avoid all the obstacles.
+
+#  Example
+
+#  For inputArray = [5, 3, 6, 7, 9], the output should be
+#  avoidObstacles(inputArray) = 4.
+
+def avoidObstacles(inputArray):
+    jump = 2
+    bunny = 0
+
+    while bunny < max(inputArray)+1:
+        print(jump)
+        print(bunny)
+        if bunny in inputArray:
+            bunny = 0
+            jump += 1
+            print(bunny)
+        else:
+            bunny += jump
+            print(jump)
+            print(bunny)
+    return jump
